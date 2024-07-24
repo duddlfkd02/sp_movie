@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화검색사이트</title>
+    <link rel="stylesheet" href="./css/gobal.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header>
+            <h1 class="header_title">영화 검색 사이트</h1>
+        </header>
+        <!-- main -->
+        <mian>
+            <!-- 검색창 start-->
+            <section class="search_container">
+                <div id="searchBox">
+                    <input id="searchInput" type="text" placeholder="영화 이름을 입력해주세요.">
+                    <button id="searchBtn">검색</button>
+                </div>
+            </section>
+            <!-- 검색창 end-->
+
+            <!-- 영화 카드 start-->
+            <section id="card_container">
+                <div id="cardBox" class="cardBox">
+                    <img src="https://cdn.slist.kr/news/photo/201904/78955_162053_1344.jpg" alt="" />
+                    <h3 id="card_title" class="card_title">영화 제목입니다.</h3>
+                    <p id="cardInfo" class="cardInfo">영화내용 요약입니다.영화내용 요약입니다.영화내용 요약입니다.영화내용 요약입니다.영화내용 요약입니다.영화내용
+                        요약입니다.영화내용 요약입니다.영화내용
+                        요약입니다.영화내용
+                        요약입니다.영화내용 요약입니다.영화내용 요약입니다.영화내용 요약입니다.영화내용 요약입니다.</p>
+                    <p class="card_score">평점 4.5</p>
+                </div>
+            </section>
+        </mian>
+    </div><!--wrapper-->
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

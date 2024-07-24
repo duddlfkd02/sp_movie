@@ -1,0 +1,105 @@
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-style: normal;
+}
+
+:root {
+    /* colors */
+    --color-main: #ffe7a6;
+    --color-accent: #ff894c;
+    --color-black: #363636;
+    --color-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+}
+
+
+/* header */
+header {
+    height: 100px;
+    background: var(--color-main);
+    line-height: 100px;
+}
+
+header h1.header_title {
+    text-align: center;
+    font-weight: 900;
+}
+
+.search_container {
+    height: 180px;
+    line-height: 180px;
+    text-align: center;
+}
+
+.search_container #searchInput {
+    width: 300px;
+    height: 50px;
+    border: 1px solid #a4a4a4;
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+
+.search_container #searchBtn {
+    width: 60px;
+    height: 50px;
+    background: var(--color-main);
+    border-radius: 5px;
+}
+
+/* 영화 카드 */
+#card_container {
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#card_container .cardBox {
+    max-width: 450px;
+    margin: 0 20px;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+#card_container .cardBox img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#card_container .cardBox .card_title {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#card_container .cardBox .cardInfo {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+#card_container .cardBox .card_score {
+    text-align: end;
+    font-size: 14px;
+}
