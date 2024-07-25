@@ -7,7 +7,7 @@ fetch(URL)
     .then(response => response.json())
     .then(data => {
         const movies = data.results;
-        console.log(movies);
+        // console.log(movies);
         const movieContainer = document.getElementById('card_container');//카드들 전체가 담기는 큰 박스
         movies.forEach(movie => {
             const card = makeMovieCard(movie);
@@ -26,7 +26,7 @@ function makeMovieCard(movie) {
     cardDiv.className = 'cardBox';
     cardDiv.innerHTML =
         `
-            <p class="card_score">${voteAver}</p>
+            <p class="card_score">Rating: ${voteAver}</p>
             <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}"  alt="${movie.title}" />
             <h3 id="card_title" class="card_title">${movie.title}</h3>
             <p id="cardInfo" class="cardInfo">${movie.overview}</p>
