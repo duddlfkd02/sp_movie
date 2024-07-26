@@ -26,11 +26,10 @@ function makeMovieCard(movie) {
     cardDiv.className = 'cardBox';
     cardDiv.innerHTML =
         `
-            <p class="card_score">Rating: ${voteAver}</p>
+            <p class="card_score"><i class="fa-solid fa-ranking-star"></i> ${voteAver}</p>
             <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}"  alt="${movie.title}" />
             <h3 id="card_title" class="card_title">${movie.title}</h3>
             <p id="cardInfo" class="cardInfo">${movie.overview}</p>
-                    
         `
     cardDiv.addEventListener('click', () => {
         alert(movie.id);

@@ -13,12 +13,15 @@ fetch(UPCOMING_URL)
     // .then(response => console.log(response))
     .then(data => {
         const upComingMovies = data.results;
-        console.log(upComingMovies);
+        // console.log(upComingMovies);
         const upComingContainer = document.getElementById('upcoming_container');
-        upComingMovies.forEach(upCome => {
-            const comeCard = randomMovie(upCome);
-            upComingContainer.appendChild(comeCard);
-        });
+        let upCome = upComingMovies[Math.floor(Math.random() * upComingMovies.length)];
+        const comeCard = randomMovie(upCome);
+        // comeCard.then..?
+
+
+
+        upComingContainer.appendChild(comeCard);
     })
     .catch(err => console.error(err));
 
@@ -29,9 +32,11 @@ function randomMovie(upCome) {
     newDiv.className = 'upcoming_div'
     newDiv.innerHTML =
         `
+        
     <img src="https://image.tmdb.org/t/p/w500/${upCome.backdrop_path}"  alt="${upCome.title}" />
     <div class="upcoming_text">
-        <h2>${upCome.title}</h2>
+        <h2 class="under_line">UpComing Movies!</h2>
+        <h3>${upCome.title}</h3>
         <p>${upCome.overview}</p>
     </div>
     
