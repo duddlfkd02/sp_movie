@@ -1,4 +1,5 @@
-const UPCOMING_URL = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`
+const API_KEY_UP = '3a5ac2e6748595f19d888fcfffc5107b';
+const UPCOMING_URL = `https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY_UP}&language=en-US&page=1`
 
 const options = {
     method: 'GET',
@@ -17,8 +18,6 @@ fetch(UPCOMING_URL)
         const upComingContainer = document.getElementById('upcoming_container');
         let upCome = upComingMovies[Math.floor(Math.random() * upComingMovies.length)];
         const comeCard = randomMovie(upCome);
-        // comeCard.then..?
-
 
 
         upComingContainer.appendChild(comeCard);
