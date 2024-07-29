@@ -72,7 +72,7 @@ function searchCards() {
     })
 }
 
-searchInput.addEventListener('keydown', (e) => {
+searchInput.addEventListener('input', (e) => {
     let keyUpValues = e.target.value;
     // // console.log(keyUpValues)
     searchCards(keyUpValues);
