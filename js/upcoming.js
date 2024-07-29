@@ -42,3 +42,5 @@ function randomMovie(upCome) {
     `
     return newDiv;
 }
+
+export { randomMovie };

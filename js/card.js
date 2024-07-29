@@ -82,3 +82,6 @@ searchInput.addEventListener('input', (e) => {
         upcomingContainer.style.display = 'block';
     }
 })
+
+
+export { searchCards, makeMovieCard };
