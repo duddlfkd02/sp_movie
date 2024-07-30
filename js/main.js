@@ -1,8 +1,7 @@
 import { getPopularList } from "./getdata.js";
-import { randomMovie, upcomeFunc } from './upcoming.js';
-import { searchCards, makeMovieCard } from './card.js';
+import { upcomeFunc } from './upcoming.js';
+import { searchCards, popularFunc } from './card.js';
 upcomeFunc();
+popularFunc()
 getPopularList();
-randomMovie();
 searchCards();
-makeMovieCard();

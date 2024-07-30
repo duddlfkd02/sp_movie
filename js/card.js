@@ -2,7 +2,7 @@ import { getPopularList } from "./getdata.js";
 // 데이터 가져오기
 
 
-const popularFunc = async () => {
+export const popularFunc = async () => {
     const data = await getPopularList();
     // console.log(data);
     const movies = data.results;
@@ -18,6 +18,7 @@ popularFunc();
 
 // * 카드 생성 *
 function makeMovieCard(movie) {
+    // console.log(movie)
     const cardDiv = document.createElement('div');
     const vote = (movie.vote_average);
     const voteAver = vote.toFixed(2)

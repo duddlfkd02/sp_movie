@@ -18,7 +18,7 @@ export const upcomeFunc = async () => {
 
 // * 랜덤으로 영화 불러오기 *
 function randomMovie(upCome) {
-    console.log(upCome);
+    // console.log(upCome);
     const newDiv = document.createElement('div');
     newDiv.className = 'upcoming_div'
     newDiv.innerHTML =
