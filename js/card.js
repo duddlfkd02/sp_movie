@@ -1,5 +1,5 @@
 import { getPopularList } from "./getdata.js";
-// 데이터 가져오기
+
 
 
 export const popularFunc = async () => {
@@ -58,7 +58,7 @@ searchBtn.addEventListener('click', (e) => {
 })
 
 
-// 검색값 포함되는 것만 보여주기
+// * 검색값 포함되는 것만 보여주기 *
 function searchCards() {
     const movieCards = document.querySelectorAll('.cardBox');
     movieCards.forEach(card => {
@@ -72,6 +72,7 @@ function searchCards() {
     })
 }
 
+// * input 이벤트로 검색 결과 출력 *
 searchInput.addEventListener('input', (e) => {
     let keyUpValues = e.target.value;
     // // console.log(keyUpValues)
@@ -83,5 +84,3 @@ searchInput.addEventListener('input', (e) => {
     }
 })
 
-
-export { searchCards, makeMovieCard };

@@ -1,7 +1,9 @@
-import { getPopularList } from "./getdata.js";
+import { getPopularList, getUpcomeList } from "./getdata.js";
 import { upcomeFunc } from './upcoming.js';
-import { searchCards, popularFunc } from './card.js';
-upcomeFunc();
-popularFunc()
+import { popularFunc } from './card.js';
+
+
+getUpcomeList();
 getPopularList();
-searchCards();
+upcomeFunc();
+popularFunc();

@@ -1,6 +1,6 @@
 import { getUpcomeList } from "./getdata.js";
 
-// 영화 api 가져오기
+
 export const upcomeFunc = async () => {
     const data = await getUpcomeList();
     // console.log(data);
@@ -8,6 +8,8 @@ export const upcomeFunc = async () => {
     const upComingMovies = data.results;
     // console.log(upComingMovies);
     const upComingContainer = document.getElementById('upcoming_container');
+
+    // * 랜덤으로 영화가져오기 *
     let upCome = upComingMovies[Math.floor(Math.random() * upComingMovies.length)];
     const comeCard = randomMovie(upCome);
 
@@ -16,7 +18,7 @@ export const upcomeFunc = async () => {
 
 
 
-// * 랜덤으로 영화 불러오기 *
+// * 영화 이미지 뼈대 그리기 *
 function randomMovie(upCome) {
     // console.log(upCome);
     const newDiv = document.createElement('div');
@@ -33,5 +35,3 @@ function randomMovie(upCome) {
     `
     return newDiv;
 }
-
-export { randomMovie };

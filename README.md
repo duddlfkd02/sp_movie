@@ -53,3 +53,9 @@
 ![](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 ![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 ![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
+
+
+<br/><br/><br/>
+
+### 07.30 개인과제 재제출
+- 비동기 작업을 하면서 js파일을 정리하였습니다.
