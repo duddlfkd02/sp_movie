@@ -1,22 +1,19 @@
-const API_KEY = '3a5ac2e6748595f19d888fcfffc5107b';
-const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
-
-//* API 불러온 후 데이터 처리
-fetch(URL)
-    .then(response => response.json())
-    .then(data => {
-        const movies = data.results;
-        // console.log(movies);
-        const movieContainer = document.getElementById('card_container');
-        movies.forEach(movie => {
-            const card = makeMovieCard(movie);
-            movieContainer.appendChild(card);
-        });
+import { getPopularList } from "./getdata.js";
+// 데이터 가져오기
 
 
+const popularFunc = async () => {
+    const data = await getPopularList();
+    // console.log(data);
+    const movies = data.results;
+    // console.log(movies);
+    const movieContainer = document.getElementById('card_container');
+    movies.forEach(movie => {
+        const card = makeMovieCard(movie);
+        movieContainer.appendChild(card);
     })
-    .catch(error => console.error('Error:', error));
-
+}
+popularFunc();
 
 
 // * 카드 생성 *
@@ -58,6 +55,8 @@ searchBtn.addEventListener('click', (e) => {
     searchCards();
 
 })
+
+
 // 검색값 포함되는 것만 보여주기
 function searchCards() {
     const movieCards = document.querySelectorAll('.cardBox');
